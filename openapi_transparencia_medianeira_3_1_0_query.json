@@ -1,0 +1,251 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Portal Transparência Medianeira (v3.1.0)",
+    "description": "API pública de transparência de Medianeira-PR",
+    "version": "1.0.1"
+  },
+  "servers": [
+    {
+      "url": "https://medianeira.oxy.elotech.com.br/portaltransparencia-api"
+    }
+  ],
+  "paths": {
+    "/api/servidores": {
+      "get": {
+        "operationId": "get_servidores",
+        "summary": "Lista os servidores",
+        "parameters": [
+          {
+            "name": "entidade",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 2025
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    },
+    "/api/diarias": {
+      "get": {
+        "operationId": "get_diarias",
+        "summary": "Lista de diárias",
+        "parameters": [
+          {
+            "name": "entidade",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 2025
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    },
+    "/api/licitacoes": {
+      "get": {
+        "operationId": "get_licitacoes",
+        "summary": "Lista de licitações",
+        "parameters": [
+          {
+            "name": "entidade",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 2025
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    },
+    "/api/obras": {
+      "get": {
+        "operationId": "get_obras",
+        "summary": "Lista de obras",
+        "parameters": [
+          {
+            "name": "entidade",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "exercicio",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 2025
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resposta bem-sucedida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno no servidor"
+          }
+        }
+      }
+    }
+  }
+}
